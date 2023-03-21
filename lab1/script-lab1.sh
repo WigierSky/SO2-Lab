@@ -37,7 +37,7 @@ find . -maxdepth 1 -type f -print0 | xargs -0 mv -t ../${TARGET_DIR}
 
 find . -maxdepth 1 -type d -print0 | xargs -0 cp -r -t ../${TARGET_DIR}
 
-# nie daje -maxdepth zeby czasem pokazalo ze zostaly jakies pliki, mimo ze to tyle te w innych folderach
+# nie daje -maxdepth zeby czasem pokazalo ze zostaly jakies pliki, mimo ze to tylko te w innych folderach
 COUNT=$(find . -type f | wc -l)
 
 if [[ "${COUNT}" -ne 0 ]] ; then
